@@ -1,0 +1,393 @@
+<!DOCTYPE html><html class="dark" lang="en" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet">
+<style>
+    @layer base {
+      html, body {
+        margin: 0;
+        padding: 0;
+        background-color: #0F1117;
+        font-family: 'Plus Jakarta Sans', sans-serif;
+      }
+      body { overscroll-behavior: none; }
+    }
+    ::-webkit-scrollbar { display: none; }
+  </style>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            obsidian: "#0F1117",
+            card: "#181B22",
+            'card-border': "rgba(255, 255, 255, 0.08)",
+            'card-hover': "#1F232D",
+            primary: "#F59E0B",
+            'primary-hover': "#D97706",
+            mint: "#10B981",
+            'mint-light': "#34D399",
+            'text-main': "#F1F5F9",
+            'text-muted': "#94A3B8",
+            'text-subtle': "#64748B"
+          },
+          borderRadius: {
+            '2xl': '16px',
+            '3xl': '24px'
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-[#0F1117] text-[#F1F5F9] antialiased min-h-screen flex flex-col selection:bg-amber-500/20 selection:text-amber-300">
+<!-- Subtle Ambient Glows -->
+<div class="fixed top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-gradient-to-b from-amber-500/10 via-amber-500/5 to-transparent blur-[140px] pointer-events-none -z-10"></div>
+<div class="fixed top-[600px] right-0 w-[500px] h-[350px] bg-emerald-500/5 blur-[150px] pointer-events-none -z-10"></div>
+<!-- Navigation Bar -->
+<header class="sticky top-0 z-50 w-full border-b border-white/[0.08] bg-[#0F1117]/80 backdrop-blur-xl">
+  <div class="max-w-6xl mx-auto px-4 md:px-6 h-14 flex items-center justify-between">
+    <!-- Brand Logo (aligned to the far left) -->
+    <a class="flex items-center gap-2.5 group" href="#">
+      <div class="w-8 h-8 rounded-full bg-gradient-to-tr from-amber-500 to-amber-400 flex items-center justify-center text-[#0F1117] shadow-md shadow-amber-500/20 group-hover:scale-105 transition-transform">
+        <span class="material-symbols-outlined text-[19px] font-bold">bolt</span>
+      </div>
+      <span class="text-lg font-bold tracking-tight text-[#F1F5F9] group-hover:text-amber-400 transition-colors">Snagr</span>
+    </a>
+    <!-- Right Action (aligned to the far right) -->
+    <div class="flex items-center">
+      <a class="inline-flex items-center justify-center px-4 py-2 rounded-full text-xs sm:text-sm font-semibold bg-[#F59E0B] text-[#0F1117] hover:bg-amber-400 shadow-md shadow-amber-500/20 active:scale-95 transition-all" href="#onboard">
+        Join Free
+      </a>
+    </div>
+  </div>
+</header>
+<!-- Main Content Container -->
+<main class="w-full flex-1 max-w-6xl mx-auto px-4 md:px-6 pt-12 pb-20 flex flex-col">
+<!-- Hero Section -->
+<section class="flex flex-col items-center text-center pt-8 pb-14 max-w-3xl mx-auto">
+<!-- Badge with Soft Amber Glow -->
+<div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-500/10 border border-amber-500/25 text-amber-300 text-xs font-semibold tracking-wide mb-6 shadow-[0_0_20px_-4px_rgba(245,158,11,0.25)]">
+<span class="">🛡️ Philippine Fragrance &amp; Tech Whitelist</span>
+</div>
+<!-- Headline -->
+<h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight text-[#F1F5F9] leading-[1.15] text-balance">
+        Find the lowest price.<br>
+<span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-amber-200">Never buy a fake.</span>
+</h1>
+<!-- Subheadline -->
+<p class="mt-5 text-base sm:text-lg text-[#94A3B8] leading-relaxed max-w-2xl text-pretty font-normal">
+        We check Shopee, TikTok Shop, and Lazada to find the best voucher-stacked price—strictly from legit, community-approved sellers.
+      </p>
+<!-- Modern Integrated Search Container -->
+<div class="mt-8 w-full max-w-xl">
+<form class="p-1.5 bg-[#181B22] border border-white/[0.12] hover:border-amber-500/40 rounded-full shadow-2xl flex items-center transition-all focus-within:border-amber-500 focus-within:ring-2 focus-within:ring-amber-500/20" onsubmit="event.preventDefault();">
+<div class="pl-4 text-[#94A3B8] flex items-center">
+<span class="material-symbols-outlined text-[22px]">search</span>
+</div>
+<input class="w-full bg-transparent border-none text-[#F1F5F9] placeholder-[#64748B] text-sm sm:text-base px-3 py-2.5 focus:outline-none focus:ring-0 font-medium" placeholder="Search perfumes, GPUs, phones..." type="text" value="Afnan 9PM (100ml)">
+<button class="px-5 sm:px-6 py-2.5 rounded-full bg-[#F59E0B] text-[#0F1117] font-semibold text-sm hover:bg-amber-400 transition-all shrink-0 active:scale-95 shadow-md shadow-amber-500/25 flex items-center gap-1.5" type="submit">
+<span class="">Snag Deals</span>
+<span class="material-symbols-outlined text-[18px] font-bold">arrow_forward</span>
+</button>
+</form>
+<!-- Social Proof Micro-Text -->
+<div class="mt-3.5 flex items-center justify-center gap-2 text-xs text-[#94A3B8] font-medium">
+<span class="material-symbols-outlined text-[15px] text-[#10B981]">verified</span>
+<span class="">30+ trusted shops indexed daily</span>
+<span class="text-white/20">•</span>
+<span class="">Zero ₱150 counterfeits</span>
+</div>
+</div>
+</section>
+<!-- Comparison Matrix Card Deck -->
+<section class="w-full mt-4 pb-16" id="matrix">
+<div class="bg-[#181B22] border border-white/[0.08] rounded-2xl p-5 sm:p-7 shadow-2xl relative overflow-hidden">
+<!-- Live Telemetry / Result Header -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-5 border-b border-white/[0.06] mb-6">
+<div class="flex items-center gap-3">
+<div class="w-2.5 h-2.5 rounded-full bg-[#10B981] animate-pulse"></div>
+<div>
+<span class="text-xs text-[#64748B] uppercase tracking-wider font-semibold block">Live Price Scan</span>
+<span class="text-sm font-semibold text-[#F1F5F9]">Afnan 9PM Eau De Parfum (100ml)</span>
+</div>
+</div>
+<div class="flex items-center gap-2 text-xs text-[#94A3B8] bg-white/[0.04] px-3 py-1.5 rounded-full border border-white/[0.06] w-fit">
+<span class="material-symbols-outlined text-[16px] text-amber-400">sync</span>
+<span class="">Real-time parity check: 3 approved sellers</span>
+</div>
+</div>
+<!-- 3 Comparison Columns -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-4 items-stretch">
+<!-- Column 1: Shopee -->
+<div class="flex flex-col justify-between p-5 bg-[#0F1117]/80 rounded-2xl border border-white/[0.08] hover:border-white/[0.15] transition-all">
+<div>
+<div class="flex items-center justify-between mb-3">
+<span class="px-2.5 py-1 rounded-md text-[11px] font-bold tracking-wide bg-[#EE4D2D]/15 text-[#EE4D2D] border border-[#EE4D2D]/20 uppercase">
+                  Shopee
+                </span>
+<span class="inline-flex items-center gap-1 text-[11px] text-[#10B981] font-medium bg-emerald-500/10 px-2 py-0.5 rounded-full">
+<span class="material-symbols-outlined text-[13px]">check_circle</span> Vetted Legit Seller
+                </span>
+</div>
+<div class="font-semibold text-base text-[#F1F5F9] mb-1">JP Fragrance</div>
+<p class="text-xs text-[#94A3B8] mb-4">Fraghead PH Tier-1 Verified</p>
+<!-- Breakdown -->
+<div class="space-y-2 py-3 border-t border-white/[0.06] text-xs text-[#94A3B8]">
+<div class="flex justify-between">
+<span class="">List baseline:</span>
+<span class="text-[#F1F5F9]">₱2,450</span>
+</div>
+<div class="flex justify-between text-emerald-400">
+<span class="">Shop voucher:</span>
+<span class="">−₱150</span>
+</div>
+<div class="flex justify-between">
+<span class="">Shipping:</span>
+<span class="text-[#F1F5F9]">Free</span>
+</div>
+</div>
+</div>
+<div class="mt-4 pt-3 border-t border-white/[0.06]">
+<span class="text-[11px] text-[#64748B] uppercase tracking-wider block font-medium">Net Checkout Price</span>
+<div class="text-2xl font-bold text-[#F1F5F9] mt-0.5">₱2,300</div>
+<a class="mt-3 block text-center py-2 px-3 rounded-xl bg-white/[0.05] hover:bg-white/[0.08] text-xs font-semibold text-[#F1F5F9] border border-white/[0.08] transition-colors" href="#">
+                View on Shopee
+              </a>
+</div>
+</div>
+<!-- Column 2: TikTok Shop (WINNER - DXB Dubai) -->
+<div class="relative flex flex-col justify-between p-5 bg-gradient-to-b from-[#1F232D] to-[#181B22] rounded-2xl border-2 border-amber-500/70 shadow-[0_0_30px_-5px_rgba(245,158,11,0.25)] md:-translate-y-1 transition-all">
+<!-- Best Price Ribbon -->
+<div class="absolute -top-3 left-1/2 -translate-x-1/2 px-3 py-0.5 rounded-full bg-gradient-to-r from-amber-500 to-emerald-400 text-[#0F1117] text-[11px] font-extrabold tracking-wider uppercase flex items-center gap-1 shadow-md">
+<span class="material-symbols-outlined text-[13px]">verified</span>
+              Best Price
+            </div>
+<div>
+<div class="flex items-center justify-between mb-3 mt-1">
+<span class="px-2.5 py-1 rounded-md text-[11px] font-bold tracking-wide bg-white/[0.08] text-white border border-white/[0.15] uppercase">
+                  TikTok Shop
+                </span>
+<span class="inline-flex items-center gap-1 text-[11px] text-[#10B981] font-medium bg-emerald-500/15 px-2 py-0.5 rounded-full">
+<span class="material-symbols-outlined text-[13px]">check_circle</span> Vetted Legit Seller
+                </span>
+</div>
+<div class="font-semibold text-base text-[#F1F5F9] mb-1">DXB Dubai Fragrances</div>
+<p class="text-xs text-amber-300/80 mb-4">Official Community Whitelist</p>
+<!-- Breakdown -->
+<div class="space-y-2 py-3 border-t border-white/[0.08] text-xs">
+<div class="flex justify-between text-[#94A3B8]">
+<span class="">List baseline:</span>
+<span class="line-through text-[#64748B]">₱2,399</span>
+</div>
+<div class="flex justify-between text-emerald-400 font-medium">
+<span class="">Flash voucher applied:</span>
+<span class="">−₱220</span>
+</div>
+<div class="flex justify-between text-amber-300">
+<span class="">Stacked creator drop:</span>
+<span class="">Applied</span>
+</div>
+</div>
+</div>
+<div class="mt-4 pt-3 border-t border-amber-500/20">
+<div class="flex items-center justify-between">
+<span class="text-[11px] text-amber-400 uppercase tracking-wider font-semibold">Net Checkout Price</span>
+<span class="text-[10px] text-emerald-400 font-bold bg-emerald-500/10 px-1.5 py-0.5 rounded">SAVES ₱221</span>
+</div>
+<div class="text-3xl font-extrabold text-[#F1F5F9] mt-0.5">₱2,179</div>
+<button class="mt-3 w-full py-2.5 px-3 rounded-xl bg-[#F59E0B] hover:bg-amber-400 text-xs font-bold text-[#0F1117] transition-all shadow-md shadow-amber-500/20 flex items-center justify-center gap-1.5 active:scale-95">
+<span class="">Snag Deal</span>
+<span class="material-symbols-outlined text-[15px]">open_in_new</span>
+</button>
+</div>
+</div>
+<!-- Column 3: Lazada -->
+<div class="flex flex-col justify-between p-5 bg-[#0F1117]/80 rounded-2xl border border-white/[0.08] hover:border-white/[0.15] transition-all">
+<div>
+<div class="flex items-center justify-between mb-3">
+<span class="px-2.5 py-1 rounded-md text-[11px] font-bold tracking-wide bg-[#0F1466] text-[#4C7CFF] border border-[#4C7CFF]/30 uppercase">
+                  Lazada
+                </span>
+<span class="inline-flex items-center gap-1 text-[11px] text-[#10B981] font-medium bg-emerald-500/10 px-2 py-0.5 rounded-full">
+<span class="material-symbols-outlined text-[13px]">check_circle</span> Vetted Legit Seller
+                </span>
+</div>
+<div class="font-semibold text-base text-[#F1F5F9] mb-1">Authentic Frag PH</div>
+<p class="text-xs text-[#94A3B8] mb-4">LazMall Authenticity Guarantee</p>
+<!-- Breakdown -->
+<div class="space-y-2 py-3 border-t border-white/[0.06] text-xs text-[#94A3B8]">
+<div class="flex justify-between">
+<span class="">List baseline:</span>
+<span class="text-[#F1F5F9]">₱2,500</span>
+</div>
+<div class="flex justify-between text-emerald-400">
+<span class="">Platform voucher:</span>
+<span class="">−₱100</span>
+</div>
+<div class="flex justify-between">
+<span class="">Shipping:</span>
+<span class="text-[#F1F5F9]">Free</span>
+</div>
+</div>
+</div>
+<div class="mt-4 pt-3 border-t border-white/[0.06]">
+<span class="text-[11px] text-[#64748B] uppercase tracking-wider block font-medium">Net Checkout Price</span>
+<div class="text-2xl font-bold text-[#F1F5F9] mt-0.5">₱2,400</div>
+<a class="mt-3 block text-center py-2 px-3 rounded-xl bg-white/[0.05] hover:bg-white/[0.08] text-xs font-semibold text-[#F1F5F9] border border-white/[0.08] transition-colors" href="#">
+                View on Lazada
+              </a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 3-Step Feature Row -->
+<section class="py-10 border-t border-white/[0.08]" id="how-it-works">
+<div class="text-center max-w-xl mx-auto mb-10">
+<h2 class="text-2xl sm:text-3xl font-bold text-[#F1F5F9] tracking-tight">How Snagr Operates</h2>
+<p class="mt-2 text-sm text-[#94A3B8]">Simple, fast, and engineered to eliminate counterfeit risks.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+<!-- Card 1 -->
+<div class="p-6 bg-[#181B22] border border-white/[0.08] rounded-2xl hover:border-white/[0.15] transition-all">
+<div class="w-10 h-10 rounded-xl bg-amber-500/10 border border-amber-500/20 text-amber-400 flex items-center justify-center font-bold text-base mb-4">
+            1
+          </div>
+<h3 class="text-base font-bold text-[#F1F5F9] mb-2">Whitelisted Only</h3>
+<p class="text-sm text-[#94A3B8] leading-relaxed">
+            We only pull listings from community-verified shops. If it's not verified, it doesn't show up.
+          </p>
+</div>
+<!-- Card 2 -->
+<div class="p-6 bg-[#181B22] border border-white/[0.08] rounded-2xl hover:border-white/[0.15] transition-all">
+<div class="w-10 h-10 rounded-xl bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 flex items-center justify-center font-bold text-base mb-4">
+            2
+          </div>
+<h3 class="text-base font-bold text-[#F1F5F9] mb-2">Voucher Calculator</h3>
+<p class="text-sm text-[#94A3B8] leading-relaxed">
+            We factor in platform vouchers, shop coupons, and flash deals to show your actual checkout total.
+          </p>
+</div>
+<!-- Card 3 -->
+<div class="p-6 bg-[#181B22] border border-white/[0.08] rounded-2xl hover:border-white/[0.15] transition-all">
+<div class="w-10 h-10 rounded-xl bg-blue-500/10 border border-blue-500/20 text-blue-400 flex items-center justify-center font-bold text-base mb-4">
+            3
+          </div>
+<h3 class="text-base font-bold text-[#F1F5F9] mb-2">All In One Spot</h3>
+<p class="text-sm text-[#94A3B8] leading-relaxed">
+            Compare Shopee, Lazada, and TikTok Shop side-by-side without switching apps.
+          </p>
+</div>
+</div>
+</section>
+<!-- Categories Section -->
+<section class="py-10" id="categories">
+<div class="flex items-center justify-between mb-6">
+<div>
+<span class="text-xs uppercase tracking-wider text-amber-400 font-semibold">Protected Verticals</span>
+<h3 class="text-lg font-bold text-[#F1F5F9] mt-0.5">Top Counterfeit-Targeted Markets</h3>
+</div>
+<span class="text-xs font-medium text-[#94A3B8] hidden sm:block">Strict Seller Registries</span>
+</div>
+<div class="grid grid-cols-2 sm:grid-cols-4 gap-3.5">
+<div class="p-4 bg-[#181B22] border border-white/[0.08] rounded-2xl hover:border-white/[0.18] transition-all flex items-center gap-3">
+<div class="w-9 h-9 rounded-xl bg-white/[0.04] flex items-center justify-center text-amber-400">
+<span class="material-symbols-outlined text-[20px]">science</span>
+</div>
+<div>
+<div class="text-xs font-semibold text-[#F1F5F9]">Fragrances</div>
+<div class="text-[11px] text-[#64748B]">Middle Eastern &amp; Niche</div>
+</div>
+</div>
+<div class="p-4 bg-[#181B22] border border-white/[0.08] rounded-2xl hover:border-white/[0.18] transition-all flex items-center gap-3">
+<div class="w-9 h-9 rounded-xl bg-white/[0.04] flex items-center justify-center text-amber-400">
+<span class="material-symbols-outlined text-[20px]">memory</span>
+</div>
+<div>
+<div class="text-xs font-semibold text-[#F1F5F9]">PC Hardware</div>
+<div class="text-[11px] text-[#64748B]">GPUs &amp; Processors</div>
+</div>
+</div>
+<div class="p-4 bg-[#181B22] border border-white/[0.08] rounded-2xl hover:border-white/[0.18] transition-all flex items-center gap-3">
+<div class="w-9 h-9 rounded-xl bg-white/[0.04] flex items-center justify-center text-amber-400">
+<span class="material-symbols-outlined text-[20px]">smartphone</span>
+</div>
+<div>
+<div class="text-xs font-semibold text-[#F1F5F9]">Smartphones</div>
+<div class="text-[11px] text-[#64748B]">NTC Approved Units</div>
+</div>
+</div>
+<div class="p-4 bg-[#181B22] border border-white/[0.08] rounded-2xl hover:border-white/[0.18] transition-all flex items-center gap-3">
+<div class="w-9 h-9 rounded-xl bg-white/[0.04] flex items-center justify-center text-amber-400">
+<span class="material-symbols-outlined text-[20px]">headphones</span>
+</div>
+<div>
+<div class="text-xs font-semibold text-[#F1F5F9]">Audiophile Gear</div>
+<div class="text-[11px] text-[#64748B]">IEMs, DACs &amp; Amps</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Clean Onboarding Card (Bottom Funnel) -->
+<section class="pt-6 pb-8" id="onboard">
+<div class="relative w-full max-w-2xl mx-auto rounded-2xl bg-[#181B22] border border-white/[0.08] p-8 sm:p-10 shadow-2xl overflow-hidden text-center">
+<!-- Warm Ambient Glow Inside Card -->
+<div class="absolute -top-20 -right-20 w-60 h-60 bg-amber-500/10 blur-[80px] pointer-events-none"></div>
+<div class="absolute -bottom-20 -left-20 w-60 h-60 bg-emerald-500/10 blur-[80px] pointer-events-none"></div>
+<div class="relative z-10">
+<h2 class="text-2xl sm:text-3xl font-bold text-[#F1F5F9] tracking-tight">
+            Ready to start saving?
+          </h2>
+<p class="mt-2.5 text-sm sm:text-base text-[#94A3B8] max-w-md mx-auto leading-relaxed font-normal">
+            Create an account to track your favorite shops and get instant price-drop alerts.
+          </p>
+<!-- Clean Email Form -->
+<form class="mt-6 flex flex-col sm:flex-row gap-2.5 max-w-md mx-auto" onsubmit="event.preventDefault(); document.getElementById('signupAlert').classList.remove('hidden');">
+<input class="flex-1 px-4 py-3 rounded-xl bg-[#0F1117] border border-white/[0.12] text-sm text-[#F1F5F9] placeholder-[#64748B] focus:outline-none focus:border-amber-500 focus:ring-1 focus:ring-amber-500 transition-all font-normal" placeholder="Enter your work or personal email" required="" type="email">
+<button class="px-6 py-3 rounded-xl bg-[#F59E0B] hover:bg-amber-400 text-[#0F1117] font-semibold text-sm transition-all whitespace-nowrap shadow-md shadow-amber-500/20 active:scale-95" type="submit">
+              Create Free Account
+            </button>
+</form>
+<!-- Feedback notification -->
+<div class="hidden mt-4 p-2.5 rounded-xl bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs font-medium" id="signupAlert">
+            ✓ Invitation dispatched! Check your email to complete your setup.
+          </div>
+<!-- Reassurances -->
+<div class="mt-5 flex items-center justify-center gap-3 text-xs text-[#94A3B8]">
+<span class="">Free forever</span>
+<span class="text-white/20">•</span>
+<span class="">No spam</span>
+<span class="text-white/20">•</span>
+<span class="">Instant alerts</span>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Clean Understated Footer -->
+<footer class="w-full border-t border-white/[0.06] bg-[#0F1117] py-8 mt-auto">
+<div class="max-w-6xl mx-auto px-4 md:px-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-[#94A3B8]">
+<div class="flex items-center gap-2">
+<div class="w-5 h-5 rounded-full bg-amber-500/20 flex items-center justify-center text-amber-400">
+<span class="material-symbols-outlined text-[13px]">bolt</span>
+</div>
+<span class="">© 2025 Snagr Technologies Inc. All rights reserved.</span>
+</div>
+<nav class="flex items-center gap-6">
+<a class="hover:text-[#F1F5F9] transition-colors" href="#">Privacy</a>
+<a class="hover:text-[#F1F5F9] transition-colors" href="#">Terms</a>
+<a class="hover:text-[#F1F5F9] transition-colors" href="#">Security</a>
+<a class="hover:text-[#F1F5F9] transition-colors" href="#">Status</a>
+</nav>
+</div>
+</footer>
+
+
+</body></html>
